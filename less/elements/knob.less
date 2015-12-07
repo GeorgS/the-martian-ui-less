@@ -1,0 +1,45 @@
+@knobSize: 8em;
+
+.m.knob {
+  display: block;
+  height: @knobSize;
+  width: @knobSize;
+  position: relative;
+}
+.m.knob:after {
+	color: @secondaryColor;
+  position: absolute;
+  height: @knobSize/(@knobSize/5);
+  width: @knobSize/(@knobSize/5);
+	left: 0;
+	top: 0;
+	margin-top: calc(50% - (@knobSize/5));
+  content: attr(data-content);
+  text-align: center;
+  border-radius: 100%;
+  line-height: 1;
+  font-size: (@knobSize/5);
+}
+
+.m.knob > svg {
+	viewPort: 0 0 @knobSize @knobSize;
+	width: @knobSize;
+	height: @knobSize;
+}
+
+.m.knob circle {
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+	stroke: #ccc;
+  stroke-width: ((@knobSize / 10) / 2);
+
+	r: ((@knobSize / 2) - 1);
+	cx: (@knobSize / 2);
+	cy: (@knobSize / 2);
+}
+.m.knob .bar {
+  stroke: @primaryColor;
+	stroke-dashoffset: ((@knobSize * 2) + 1) + (2  * ((@knobSize/2 + 1)));
+	stroke-width: ((@knobSize / 10));
+}
