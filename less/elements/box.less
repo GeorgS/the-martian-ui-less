@@ -1,6 +1,4 @@
 .m.box {
-  width: 33%;
-  min-height: 200px;
   border: 3px solid @primaryColor;
   margin-bottom: 10px;
 }
@@ -9,6 +7,21 @@
   border-bottom: 3px solid @primaryColor;
   padding-top: 10px;
   padding-left: 10px;
+}
+
+.m.box > .m.footer {
+  border-top: 3px solid @primaryColor;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.m.box > .m.footer.center {
+  padding-left: 0;
+}
+
+.m.box > .m.footer.right {
+  padding-left: 0;
+  padding-right: 10px;
 }
 
 .m.box > .content {

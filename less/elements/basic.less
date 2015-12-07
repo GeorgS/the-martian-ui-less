@@ -1,12 +1,27 @@
-/* Header */
-.m.header {
+/* Text align */
+.m.center {
+  text-align: center;
+}
+
+.m.left {
+  text-align: left;
+}
+
+.m.right {
+  text-align: right;
+}
+
+/* Header and Footer */
+.m.header,
+.m.footer {
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .m.subheader,
-.m.header > .subheader {
+.m.header > .subheader,
+.m.footer > .subfooter {
   color: @secondaryColor;
   display: block;
   font-size: 50%;
